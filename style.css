@@ -1,0 +1,116 @@
+:root {
+  --Dark-Blue: hsl(217, 28%, 15%); /* (intro and email sign up background) */
+  --Dark-Blue-main-bg: hsl(218, 28%, 13%);
+  --Dark-Blue-footer-bg: hsl(216, 53%, 9%);
+  --Dark-Blue-testimonials: hsl(219, 30%, 18%); /* (testimonials background)*/
+  --Cyan: hsl(176, 68%, 64%); /*(inside call-to-action gradient)*/
+  --Blue: hsl(198, 60%, 50%); /* (inside call-to-action gradient)*/
+  --Light-Red: hsl(0, 100%, 63%); /* (error)*/
+  --White: hsl(0, 0%, 100%);
+
+  --font-size: 0.875rem;
+  --ff-accent: "Raleway", sans-serif; /* Headings, Call-to-actions, Header Navigation */
+  --ff-body: "Open Sans", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--White);
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: var(--Dark-Blue-main-bg);
+  color: var(--White);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--ff-accent);
+}
+
+.primary-nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+section {
+  display: flex;
+}
+
+.first-section {
+  flex-direction: column;
+  align-items: center;
+}
+
+.second-section {
+  flex-direction: column;
+}
+
+.top-row,
+.bottom-row {
+  display: flex;
+}
+
+.row-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row-item p {
+  text-align: center;
+}
+
+.link {
+  display: flex;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--Cyan);
+}
+
+.testimonials {
+  gap: 1rem;
+}
+
+.review {
+  background-color: var(--Dark-Blue-testimonials);
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+}
+
+.author-box img {
+  height: 30px;
+  border-radius: 50%;
+}
+
+.sign-up {
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+}
