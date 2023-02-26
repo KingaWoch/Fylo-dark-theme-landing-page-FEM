@@ -23,11 +23,16 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot-desktop.png)
+![](./screenshot-desktop-active.png)
+![](./screenshot-mobile-1.png)
+![](./screenshot-mobile-2.png)
+![](./screenshot-mobile-3.png)
+![](./screenshot-mobile-4.png)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live Site at Netlify](https://fylo-dark-theme-landing-page-kw.netlify.app)
 
 ## My process
 
