@@ -42,9 +42,11 @@ ul {
 
 /* BODY STYLING */
 body {
-  background-color: var(--Dark-Blue-main-bg);
   color: var(--White);
   font-family: var(--ff-body);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Dark-Blue-main-bg);
 }
 
 header,
@@ -59,9 +61,8 @@ input {
 .container {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 8rem;
+  width: 100%;
 }
 
 button {
@@ -73,8 +74,8 @@ button {
   color: var(--White);
   border-radius: 2rem;
   font-weight: 700;
-  width: 200px;
-  height: 50px;
+  width: 250px;
+  height: 60px;
 }
 
 .get-started-btn:hover {
@@ -87,6 +88,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 5rem;
+  background-color: var(--Dark-Blue);
 }
 
 .primary-nav ul {
@@ -94,7 +96,7 @@ header {
   gap: 2rem;
 }
 
-nav a:hover {
+.primary-nav a:hover {
   text-decoration: underline;
   font-weight: 700;
 }
@@ -111,10 +113,14 @@ section {
   text-align: center;
   padding: 0 16rem;
   gap: 2rem;
+  background: url(images/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: var(--Dark-Blue);
 }
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   line-height: 1.5;
 }
 
@@ -129,7 +135,7 @@ h1 {
   flex-direction: column;
   gap: 4rem;
   font-size: var(--font-size);
-  padding: 0 11rem;
+  padding: 0 15rem;
 }
 
 .top-row,
@@ -145,6 +151,10 @@ h1 {
   gap: 1rem;
 }
 
+h3 {
+  font-size: 1.2rem;
+}
+
 .row-item p {
   text-align: center;
   line-height: 1.5;
@@ -154,6 +164,7 @@ h1 {
 
 .third-section {
   gap: 3rem;
+  padding: 0 4.5rem;
 }
 
 .right-column h2 {
@@ -189,21 +200,36 @@ h1 {
 }
 
 .link:hover,
-.link a:hover {
+.link:hover a {
   border-color: var(--White);
   color: var(--White);
+}
+
+.arrow {
+  height: 16px;
+  aspect-ratio: 1;
+  background: url(images/icon-arrow.svg);
+}
+
+.link:hover .arrow {
+  background: url(images/icon-arrow-white.svg);
 }
 
 /* TESTIMONIALS STYLING */
 
 .testimonials {
   gap: 2.5rem;
+  padding: 0 4.5rem;
+  position: relative;
 }
 
 .review {
   background-color: var(--Dark-Blue-testimonials);
   padding: 1.5rem;
   border-radius: 0.3rem;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(32, 42, 60, 0.24);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(32, 42, 60, 0.24);
+  box-shadow: 10px 10px 5px 0px rgba(32, 42, 60, 0.24);
 }
 
 .review p {
@@ -232,6 +258,13 @@ h1 {
   border-radius: 50%;
 }
 
+.quotes {
+  height: 90px;
+  position: absolute;
+  z-index: -1;
+  left: 66px;
+  top: -35px;
+}
 /* SIGN UP STYLING */
 
 .sign-up {
@@ -244,7 +277,11 @@ h1 {
   gap: 2rem;
   margin-top: 6rem;
   margin-bottom: -7rem;
+  z-index: 1;
   border-radius: 0.3rem;
+  -webkit-box-shadow: 3px 2px 5px 3px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 3px 2px 5px 3px rgba(0, 0, 0, 0.18);
+  box-shadow: 3px 2px 5px 3px rgba(0, 0, 0, 0.18);
 }
 
 .sign-up h2 {
@@ -268,10 +305,25 @@ input {
   border-radius: 2rem;
   border: none;
   padding: 0 2rem;
+  outline: none;
+  font-weight: 700;
 }
 
 input::placeholder {
   opacity: 0.7;
+}
+
+#error {
+  color: var(--Light-Red);
+  font-size: 0.7rem;
+  align-self: flex-start;
+  margin-top: -1.5rem;
+  margin-left: 2rem;
+  display: none;
+}
+
+#error.visible {
+  display: flex;
 }
 
 /* FOOTER STYLING */
@@ -321,6 +373,10 @@ footer {
   gap: 1rem;
 }
 
+.footer-nav a:hover {
+  font-weight: 700;
+}
+
 .socials {
   display: flex;
   gap: 1rem;
@@ -328,10 +384,21 @@ footer {
 
 .socials i {
   border: 1px solid var(--White);
-  height: 30px;
+  height: 35px;
   aspect-ratio: 1;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.socials i:hover {
+  color: var(--Cyan);
+  border-color: var(--Cyan);
+}
+
+.attribution {
+  font-size: 0.7rem;
+  text-align: center;
 }
